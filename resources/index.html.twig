@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SURFconext Strong Authentication SFO Sample Application</title>
+    <link href="twbs/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="page-header">
+        <h1>SURFconext Strong Authentication<br><small>Second Factor Only – Sample Application</small></h1>
+    </div>
+    <div class="text-muted">
+        <p>This application demonstrates the second factor only (SFO) authentication endpoint of SURFconext
+        Strong Authentication (SA). SFO authentication is for applications that want to authenticate
+        <em>only</em> the second authentication factor of the user. These applications use some other,
+        application specific, means of handling the first factor authentications and establishing the
+        identity of the user.</p>
+        <p>Applications that do not use SFO use the normal SURFconext Strong Authentication endpoint and get
+        all of the above in one authentication step.</p>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">1. Native authentication</h2>
+        </div>
+        <div class="panel-body">
+            {% if native.auth %}
+                <div class="alert alert-success" role="alert">
+                    You have an active native authentication session
+                </div>
+                <table class="table">
+                    <thead><th>Attribute name</th><th>Attribute value(s)</th></thead>
+                {% for name,attr in native.attr %}
+                    <tr><td>{{ name }}</td><td>{% for value in attr %}{{ value }}<br>{% endfor %}</td></tr>
+                {% endfor %}
+                </table>
+                <p><a class="btn btn-primary" href="logout.php" role="button">Logout</a></p>
+            {% else %}
+                <div class="alert alert-info" role="alert">
+                    You are not authenticated
+                </div>
+                <p>Login to start authentication</p>
+                <p><a class="btn btn-primary" href="login.php" role="button">Login</a></p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">2. Determine userID for SFO</h2>
+        </div>
+        <div class="panel-body">
+            {% if sfo.userid %}
+                <p>Your userID for SFO authentication is <samp>{{ sfo.userid }}</samp></p>
+            {% else %}
+                <p>Could not determine the userID. {% if not native.auth %}You need to login first.{% else %}Something went wrong.{% endif %}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">3. Second factor authentication</h2>
+        </div>
+        <div class="panel-body">
+            {% if sfo.auth %}
+                <div class="alert alert-success" role="alert">You have an active SFO authentication session</div>
+                <dl class="dl-horizontal">
+                    <dt>AuthnConext</dt><dd><samp>{{ sfo.authData['saml:sp:AuthnContext'] }}</samp></dd>
+                    <dt>NameID</dt><dd><samp>{{ sfo.authData['saml:sp:NameID'].Value }}</samp></dd>
+                </dl>
+                <p><a class="btn btn-primary" href="logout.php" role="button">Logout</a></p>
+            {% else %}
+                <div class="alert alert-info" role="alert">You are not authenticated</div>
+                {% if sfo.userid %}
+                    <p>You can login using userID <samp>{{ sfo.userid }}</samp></p>
+                    <p><a class="btn btn-primary" href="login.php" role="button">Login</a></p>
+                {% else %}
+                    <p><a class="btn btn-primary" disabled="true" role="button">Login</a></p>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

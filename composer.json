@@ -1,0 +1,21 @@
+{
+  "name": "surfnet/sfo-demo",
+  "description": "SFO demo",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Pieter van der Meulen",
+      "email": "pieter.vandermeulen@surfnet.nl"
+    }
+  ],
+  "require": {
+    "simplesamlphp/simplesamlphp": "dev-master",
+    "twig/twig": "~1.0",
+    "twbs/bootstrap": "^3.3"
+  },
+  "autoload": {
+    "files": ["src/bootstrap.inc"]
+  }
+}
