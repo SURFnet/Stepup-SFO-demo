@@ -35,7 +35,7 @@ After installation you can browse to [http://localhost:8080](http://localhost:80
 admin interface can be accessed from [http://localhost:8080/simplesaml](http://localhost:8080/simplesaml) the password
 for the 'admin' user is 'admin'. 
 The SimpleSAMLphp installation is fully functional. You can use the first authentication step ("native authentication").
-There are two user accounts in the demo authsource (see [authsources.php](config/simplesaml/authsources.php#L99-120)):
+There are two user accounts in the demo authsource (see [authsources.php](config/simplesaml/authsources.php#L99-L120)):
 
 * User *student* with password *studentpass*
 * User *employee* with password *employeepass*
@@ -48,8 +48,8 @@ application generates using the [Firefox saml-tracer plugin](https://addons.mozi
 
 To get a fully functional demo that can be connected to the SURFconext SA Pilot environment you would need to:
 - Install the application on a webserver and make it available over HTTPS
-- Generate a new SAML signing certificate and key see the `sfo-sp` authsource in [authsources.php](config/simplesaml/authsources.php#L35-43)
+- Generate a new SAML signing certificate and key see the `sfo-sp` authsource in [authsources.php](config/simplesaml/authsources.php#L35-L43)
 - Update [config.php](config/simplesaml/config.php) with production settings
 - Contact info@surfconext.nl and provide the SAML metadata of the SFO SP
-- Update the `native-auth` authsource in [authsources.php](config/simplesaml/authsources.php#L99-120) so it can 
+- Update the `native-auth` authsource in [authsources.php](config/simplesaml/authsources.php#L99-L120) so it can 
   authenticate the users of your institution and provide the attributes to generate the userID for SFO.  
