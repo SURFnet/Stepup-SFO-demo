@@ -13,7 +13,7 @@ More information about SURFconext Strong Authentication can be found at:
 
 * http://www.surfconext.nl - About SURFconext
 * https://wiki.surfnet.nl/display/surfconextdev/SURFconext+Strong+Authentication - SURFconext Strong Authentication
-* https://wiki.surfnet.nl/display/surfconextdev/Second+Factor+Only+%28SFO%29+Authentication - Description of SFO
+* https://wiki.surfnet.nl/display/surfconextdev/Second+Factor+Only+(SFO)+Authentication - Description of SFO
 
 ## Installation
 
