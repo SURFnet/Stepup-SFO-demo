@@ -1,0 +1,8 @@
+{
+  "name": "pmeulen/simplesamlphp-module-authsourcewrapper",
+  "description": "This module is a wrapper around another authsource. It behaves like an authsource.",
+  "type": "simplesamlphp-module",
+  "require": {
+    "simplesamlphp/composer-module-installer": "~1.0"
+  }
+}

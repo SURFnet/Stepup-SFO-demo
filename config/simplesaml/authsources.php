@@ -115,6 +115,39 @@ $config = array(
         ),
     ),
 
+
+    // Wrapper for the 'sfo-sp' authsource that sets the Subject NameID in the AuthnRequest
+    // This authsource is only used by the IdP proxy.
+    'sfo-sp-wrapper' => array(
+        'authsourcewrapper:Wrapper',
+
+        'authsource' => 'sfo-sp',
+
+        'loginParams' => function( $authID ) {
+            // TODO: Set user
+            $uid = 'unknown_user';
+            if ( isset($_SERVER['REMOTE_USER']) ) {
+                $uid=$_SERVER['REMOTE_USER'];
+            }
+            // TODO: Set organisation
+            $org = 'example.org';
+
+            // Build
+            $userID='urn:collab:person:' . $org . ':' . $uid;
+            $nameID = array(
+                'Format' => SAML2_Const::NAMEID_UNSPECIFIED,
+                'Value' => $userID
+            );
+
+            return array(
+                'saml:NameID' => $nameID, // Set Subject in AuthnRequest
+                'saml:AuthnContextClassRef' => 'http://pilot.surfconext.nl/assurance/sfo-level2', // Could be set in sfo-sp config as well
+                'saml:idp' => 'https://gateway.pilot.stepup.surfconext.nl/second-factor-only/metadata', // Could be set in sfo-sp config as well
+            );
+        },
+
+    ),
+
     // Many more authentication modules are available.
 
 );
