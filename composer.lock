@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "02447d4b4208d9c947304d97a5b47b23",
+    "hash": "2844dea1538ab6f0d6f3bcc3bb0f20f1",
+    "content-hash": "4b44a62a5fd16eb6070d03fee36289e8",
     "packages": [
         {
             "name": "gettext/gettext",
@@ -64,7 +65,7 @@
                 "po",
                 "translation"
             ],
-            "time": "2016-08-01T18:09:57+00:00"
+            "time": "2016-08-01 18:09:57"
         },
         {
             "name": "gettext/languages",
@@ -118,7 +119,7 @@
                 "translations",
                 "unicode"
             ],
-            "time": "2015-03-27T11:32:41+00:00"
+            "time": "2015-03-27 11:32:41"
         },
         {
             "name": "jaimeperez/twig-configurable-i18n",
@@ -162,7 +163,25 @@
                 "translation",
                 "twig"
             ],
-            "time": "2016-10-03T12:34:15+00:00"
+            "time": "2016-10-03 12:34:15"
+        },
+        {
+            "name": "pmeulen/simplesamlphp-module-authsourcewrapper",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "authsourcewrapper",
+                "reference": "e83e0a885c490a40a268f4a910d98a313b8291d0",
+                "shasum": null
+            },
+            "require": {
+                "simplesamlphp/composer-module-installer": "~1.0"
+            },
+            "type": "simplesamlphp-module",
+            "description": "This module is a wrapper around another authsource. It behaves like an authsource.",
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "psr/log",
@@ -209,7 +228,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "robrichards/xmlseclibs",
@@ -250,7 +269,37 @@
                 "xml",
                 "xmldsig"
             ],
-            "time": "2016-09-08T13:15:00+00:00"
+            "time": "2016-09-08 13:15:00"
+        },
+        {
+            "name": "simplesamlphp/composer-module-installer",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/simplesamlphp/composer-module-installer.git",
+                "reference": "3c89dfcbf89c055c6327424fbfa15e71eb48be9e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/simplesamlphp/composer-module-installer/zipball/3c89dfcbf89c055c6327424fbfa15e71eb48be9e",
+                "reference": "3c89dfcbf89c055c6327424fbfa15e71eb48be9e",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "SimpleSamlPhp\\Composer\\ModuleInstallerPlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "SimpleSamlPhp\\Composer": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "A Composer plugin that allows installing SimpleSAMLphp modules through Composer.",
+            "time": "2016-06-30 11:33:43"
         },
         {
             "name": "simplesamlphp/saml2",
@@ -258,12 +307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2.git",
-                "reference": "76a0ec0dbb60ad53ec1937e403497de939ae2113"
+                "reference": "938edf86681ce43ffe8c565476c311ee6d72eccf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/76a0ec0dbb60ad53ec1937e403497de939ae2113",
-                "reference": "76a0ec0dbb60ad53ec1937e403497de939ae2113",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/938edf86681ce43ffe8c565476c311ee6d72eccf",
+                "reference": "938edf86681ce43ffe8c565476c311ee6d72eccf",
                 "shasum": ""
             },
             "require": {
@@ -302,7 +351,7 @@
                 }
             ],
             "description": "SAML2 PHP library from SimpleSAMLphp",
-            "time": "2016-11-04 20:18:40"
+            "time": "2016-11-09 13:04:58"
         },
         {
             "name": "simplesamlphp/simplesamlphp",
@@ -428,7 +477,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2016-07-25T15:51:55+00:00"
+            "time": "2016-07-25 15:51:55"
         },
         {
             "name": "twig/extensions",
@@ -480,20 +529,20 @@
                 "i18n",
                 "text"
             ],
-            "time": "2016-10-25T17:34:14+00:00"
+            "time": "2016-10-25 17:34:14"
         },
         {
             "name": "twig/twig",
-            "version": "v1.27.0",
+            "version": "v1.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3c6c0033fd3b5679c6e1cb60f4f9766c2b424d97"
+                "reference": "60ae30368f7ac50a95de032f16c1e882b0f69813"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3c6c0033fd3b5679c6e1cb60f4f9766c2b424d97",
-                "reference": "3c6c0033fd3b5679c6e1cb60f4f9766c2b424d97",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/60ae30368f7ac50a95de032f16c1e882b0f69813",
+                "reference": "60ae30368f7ac50a95de032f16c1e882b0f69813",
                 "shasum": ""
             },
             "require": {
@@ -506,7 +555,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.27-dev"
+                    "dev-master": "1.28-dev"
                 }
             },
             "autoload": {
@@ -541,7 +590,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-10-25T19:17:17+00:00"
+            "time": "2016-11-17 17:46:53"
         },
         {
             "name": "whitehat101/apr1-md5",
@@ -585,7 +634,7 @@
                 "MD5",
                 "apr1"
             ],
-            "time": "2015-02-11T11:06:42+00:00"
+            "time": "2015-02-11 11:06:42"
         }
     ],
     "packages-dev": [],
