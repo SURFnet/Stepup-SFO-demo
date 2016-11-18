@@ -17,8 +17,8 @@ More information about SURFconext Strong Authentication can be found at:
 
 This demo shows two different methods of using SFO:
 
-1. Using SFO from an application. This method is demonstrated by going to [http://localhost:8080](http://localhost:8080). You can find the "application" in the /src and /www directories. 
-2. Advanced and optional -- Using SimpleSAMLphp as a SAML proxy. This method demonstrates how to stepup SimpleSAMLphp as SAML proxy that authenticates a user to the SFO endpoint. The first factor authentication of the user should be provided by the webserver (e.g. HTTP BasicAuth, IWA, etc). Setting this up is out of scope of the demo. An external SAML SP (not part of the demo) can then use SimpleSAMLphp proxy as IdP. The 'authsourcewrapper' module that is included in this demo is used to add the Subject NameID to the AuthnRequest that is required by SFO. 
+1. *Using SFO from an application*. This method is demonstrated by going to [http://localhost:8080](http://localhost:8080). You can find the "application" in the /src and /www directories. The application is in complete control over how and when the 1st and second factor of the user are authenticated. 
+2. Advanced and optional -- *Using SimpleSAMLphp as a SAML proxy* to handle the SFO authentication for another application. This method demonstrates how to setup SimpleSAMLphp as SAML proxy that receives an authentication request from an external application and takes care of the authentication of a user to the SFO endpoint on behalf of the external application. In this setup the first factor authentication of the user is provided by the webserver (e.g. using HTTP BasicAuth, IWA, etc) and is available in a `$_SERVER[]` variable or HTTP-header. Setting up this first factor authentication is out of scope of the demo. An external SAML SP (not part of the demo) can then use the SimpleSAMLphp proxy as IdP. The 'authsourcewrapper' module that is included in this demo is used to add the Subject NameID to the AuthnRequest that is required by SFO based on the first factor authentication from the webserver. 
 
 ## Installation
 
@@ -36,9 +36,7 @@ Installation:
 3. Run `composer install`
 4. Start the PHP builtin webserver using `php -S localhost:8080 -t ./www`
 
-After installation you can browse to [http://localhost:8080](http://localhost:8080) to access the demo. The SimpleSAMLphp 
-admin interface can be accessed from [http://localhost:8080/simplesaml](http://localhost:8080/simplesaml) the password
-for the 'admin' user is 'admin'. 
+After installation you can browse to [http://localhost:8080](http://localhost:8080) to access the first demo (Using SFO from an application). The SimpleSAMLphp admin interface can be accessed from [http://localhost:8080/simplesaml](http://localhost:8080/simplesaml). The password for the 'admin' user is 'admin'. 
 The SimpleSAMLphp installation is fully functional. You can use the first authentication step ("native authentication").
 There are two user accounts in the demo authsource (see [authsources.php](config/simplesaml/authsources.php#L99-L120)):
 
@@ -56,5 +54,15 @@ To get a fully functional demo that can be connected to the SURFconext SA Pilot 
 - Generate a new SAML signing certificate and key see the `sfo-sp` authsource in [authsources.php](config/simplesaml/authsources.php#L35-L43)
 - Update [config.php](config/simplesaml/config.php) with production settings
 - Contact info@surfconext.nl and provide the SAML metadata of the SFO SP
-- Update the `native-auth` authsource in [authsources.php](config/simplesaml/authsources.php#L99-L120) so it can 
+
+### Using SFO from an application
+
+For the first demo (Using SFO from an application) you must:
+- Update the `native-auth` authsource in [authsources.php](config/simplesaml/authsources.php#L97-L116) so it can 
   authenticate the users of your institution and provide the attributes to generate the userID for SFO.  
+
+### Using SimpleSAMLphp as a SAML proxy
+
+The second demo requires more configuration. You must:
+- Setup a remote SP and add the metadata of this SP to [saml20-sp-remote.php](config/simplesaml/metadata/saml20-sp-remote.php). See the [SP remote metadata reference](https://simplesamlphp.org/docs/stable/simplesamlphp-reference-sp-remote). Likewise you will probably need IdP metadata of the SimpleSAMLphp proxy for configuring the Remote SP: http://localhost:8080/simplesaml/saml2/idp/metadata.php 
+- Update the configuration of the `sfo-sp-wrappe` authsource in [authsources.php](config/simplesaml/authsources.php#L126-L147) to generate the correct user `uid` and `org`.
