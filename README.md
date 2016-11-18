@@ -15,6 +15,11 @@ More information about SURFconext Strong Authentication can be found at:
 * https://wiki.surfnet.nl/display/surfconextdev/SURFconext+Strong+Authentication - SURFconext Strong Authentication
 * https://wiki.surfnet.nl/display/surfconextdev/Second+Factor+Only+(SFO)+Authentication - Description of SFO
 
+This demo shows two different methods of using SFO:
+
+1. Using SFO from an application. This method is demonstrated by going to [http://localhost:8080](http://localhost:8080). You can find the "application" in the /src and /www directories. 
+2. Advanced and optional -- Using SimpleSAMLphp as a SAML proxy. This method demonstrates how to stepup SimpleSAMLphp as SAML proxy that authenticates a user to the SFO endpoint. The first factor authentication of the user should be provided by the webserver (e.g. HTTP BasicAuth, IWA, etc). Setting this up is out of scope of the demo. An external SAML SP (not part of the demo) can then use SimpleSAMLphp proxy as IdP. The 'authsourcewrapper' module that is included in this demo is used to add the Subject NameID to the AuthnRequest that is required by SFO. 
+
 ## Installation
 
 The installation instructions are for running the demo using the php builtin webserver.
