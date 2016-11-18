@@ -65,4 +65,4 @@ For the first demo (Using SFO from an application) you must:
 
 The second demo requires more configuration. You must:
 - Setup a remote SP and add the metadata of this SP to [saml20-sp-remote.php](config/simplesaml/metadata/saml20-sp-remote.php). See the [SP remote metadata reference](https://simplesamlphp.org/docs/stable/simplesamlphp-reference-sp-remote). Likewise you will probably need IdP metadata of the SimpleSAMLphp proxy for configuring the Remote SP: http://localhost:8080/simplesaml/saml2/idp/metadata.php 
-- Update the configuration of the `sfo-sp-wrappe` authsource in [authsources.php](config/simplesaml/authsources.php#L126-L147) to generate the correct user `uid` and `org`.
+- Update the configuration of the `sfo-sp-wrapper` authsource in [authsources.php](config/simplesaml/authsources.php#L126-L147) to generate the correct user `uid` and `org`.
