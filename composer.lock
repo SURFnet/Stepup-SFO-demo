@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2844dea1538ab6f0d6f3bcc3bb0f20f1",
-    "content-hash": "4b44a62a5fd16eb6070d03fee36289e8",
+    "hash": "9ec404a6c3a79fb85e644f35a735da47",
+    "content-hash": "11dd6a0e972229f142a8c52cb56e13e7",
     "packages": [
         {
             "name": "gettext/gettext",
@@ -69,16 +69,16 @@
         },
         {
             "name": "gettext/languages",
-            "version": "2.1.2",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mlocati/cldr-to-gettext-plural-rules.git",
-                "reference": "c43ade7e3fb68bcf2379036513dce8d20553d9c8"
+                "reference": "0540c37d9ba554ef8fc240123cb3ee8df222e3b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/cldr-to-gettext-plural-rules/zipball/c43ade7e3fb68bcf2379036513dce8d20553d9c8",
-                "reference": "c43ade7e3fb68bcf2379036513dce8d20553d9c8",
+                "url": "https://api.github.com/repos/mlocati/cldr-to-gettext-plural-rules/zipball/0540c37d9ba554ef8fc240123cb3ee8df222e3b9",
+                "reference": "0540c37d9ba554ef8fc240123cb3ee8df222e3b9",
                 "shasum": ""
             },
             "require": {
@@ -98,7 +98,7 @@
                 {
                     "name": "Michele Locati",
                     "email": "mlocati@gmail.com",
-                    "role": "developer"
+                    "role": "Developer"
                 }
             ],
             "description": "gettext languages with plural rules",
@@ -119,7 +119,7 @@
                 "translations",
                 "unicode"
             ],
-            "time": "2015-03-27 11:32:41"
+            "time": "2016-12-06 08:00:42"
         },
         {
             "name": "jaimeperez/twig-configurable-i18n",
@@ -307,12 +307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/saml2.git",
-                "reference": "938edf86681ce43ffe8c565476c311ee6d72eccf"
+                "reference": "f93e9bbb5866b70d15f6edb199583fc78bfb1a59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/938edf86681ce43ffe8c565476c311ee6d72eccf",
-                "reference": "938edf86681ce43ffe8c565476c311ee6d72eccf",
+                "url": "https://api.github.com/repos/simplesamlphp/saml2/zipball/f93e9bbb5866b70d15f6edb199583fc78bfb1a59",
+                "reference": "f93e9bbb5866b70d15f6edb199583fc78bfb1a59",
                 "shasum": ""
             },
             "require": {
@@ -351,7 +351,7 @@
                 }
             ],
             "description": "SAML2 PHP library from SimpleSAMLphp",
-            "time": "2016-11-09 13:04:58"
+            "time": "2016-12-14 16:26:13"
         },
         {
             "name": "simplesamlphp/simplesamlphp",
@@ -359,12 +359,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplesamlphp/simplesamlphp.git",
-                "reference": "5f4a490444b4dc08ce765a2ce120681be507faac"
+                "reference": "c869582b3b92af6a0ee486320f087ed9d9854138"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp/zipball/5f4a490444b4dc08ce765a2ce120681be507faac",
-                "reference": "5f4a490444b4dc08ce765a2ce120681be507faac",
+                "url": "https://api.github.com/repos/simplesamlphp/simplesamlphp/zipball/c869582b3b92af6a0ee486320f087ed9d9854138",
+                "reference": "c869582b3b92af6a0ee486320f087ed9d9854138",
                 "shasum": ""
             },
             "require": {
@@ -426,7 +426,7 @@
                 "sp",
                 "ws-federation"
             ],
-            "time": "2016-11-03 11:58:36"
+            "time": "2016-12-14 15:25:03"
         },
         {
             "name": "twbs/bootstrap",
@@ -533,16 +533,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.28.0",
+            "version": "v1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "60ae30368f7ac50a95de032f16c1e882b0f69813"
+                "reference": "74f723e542368ca2080b252740be5f1113ebb898"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/60ae30368f7ac50a95de032f16c1e882b0f69813",
-                "reference": "60ae30368f7ac50a95de032f16c1e882b0f69813",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/74f723e542368ca2080b252740be5f1113ebb898",
+                "reference": "74f723e542368ca2080b252740be5f1113ebb898",
                 "shasum": ""
             },
             "require": {
@@ -550,12 +550,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~2.7"
+                "symfony/phpunit-bridge": "~3.2@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.28-dev"
+                    "dev-master": "1.29-dev"
                 }
             },
             "autoload": {
@@ -590,7 +590,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-11-17 17:46:53"
+            "time": "2016-12-13 17:28:18"
         },
         {
             "name": "whitehat101/apr1-md5",
