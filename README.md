@@ -1,9 +1,9 @@
 # SURFconext SA Second Factor Only Sample Application
 
 This application demonstrates using the second factor only (SFO) authentication endpoint of SURFconext 
-Strong Authentication (SA). SFO authentication is for applications that want to authenticate
-*only* the second authentication factor of the user. These applications use some other,
-application specific, means of handling the first factor authentications and establishing the
+Strong Authentication (SA). SFO authentication is for applications that want to use SURFconext Strong 
+Authentication to authenticate *only* the second authentication factor of the user. These applications 
+use some other, application specific, means of handling the first factor authentications and establishing the
 identity of the user.
 
 Applications that do not use SFO use the normal SURFconext Strong Authentication endpoint and get
