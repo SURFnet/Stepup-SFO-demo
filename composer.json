@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "simplesamlphp/simplesamlphp": "dev-master",
+    "simplesamlphp/simplesamlphp": "~1.15.0",
     "pmeulen/simplesamlphp-module-authsourcewrapper": "*",
     "twig/twig": "~1.0",
     "twbs/bootstrap": "^3.3"
