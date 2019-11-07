@@ -26,7 +26,7 @@ The installation instructions are for running the demo using the php builtin web
 
 Requirements:
 
-* The demo should work with PHP version >= 5.4 (cli version). Tested with 5.5 and 5.6.
+* The demo should work with PHP version >= 5.5 (cli version). Tested with 5.5, 5.6 and 7.1.
 * Installation uses composer. See [https://getcomposer.org/download/]() for download/installation instructions.
 
 Installation:
